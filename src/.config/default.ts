@@ -9,7 +9,7 @@ export const defaultConfig: ThemeConfig = {
     subtitle: 'Typography',
     author: 'Moeyua',
     description: 'Rediscory the beauty of typography',
-    website: 'https://astro-theme-typography.vercel.app/',
+    website: 'https://yukino56.github.io/astro-theme-typography/',
     pageSize: 5,
     socialLinks: [
       {

@@ -11,9 +11,9 @@ import { themeConfig } from './src/.config'
 
 // https://astro.build/config
 export default defineConfig({
-  site: themeConfig.site.website,
+  site: 'https://yukino56.github.io',
   prefetch: true,
-  base: '/',
+  base: '/astro-theme-typography/',
   vite: {
     plugins: [
       // eslint-disable-next-line ts/ban-ts-comment
