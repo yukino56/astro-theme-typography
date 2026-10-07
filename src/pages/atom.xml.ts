@@ -1,3 +1,4 @@
+import { withBase } from '~/utils/url'
 import type { APIContext } from 'astro'
 import type { Post } from '~/types'
 import rss from '@astrojs/rss'
@@ -31,7 +32,7 @@ function getCustomData() {
 
 function getPostItem(post: Post) {
   const postItem = {
-    link: `/posts/${post.id}/`,
+    link: withBase(`/posts/${post.id}/`),
     author: post.data.author ?? author,
     content: getPostContent(post),
     title: post.data.title,

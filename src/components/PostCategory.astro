@@ -1,4 +1,5 @@
 ---
+import { withBase } from '~/utils/url'
 import { themeConfig } from '~/.config'
 import { getPathFromCategory } from '~/utils'
 
@@ -9,7 +10,7 @@ interface Props {
 const { category } = Astro.props
 
 function getCategoryUrl(category: string) {
-  return `/categories/${getPathFromCategory(category, themeConfig.site.categoryMap)}`
+  return withBase(`/categories/${getPathFromCategory(category, themeConfig.site.categoryMap)}`)
 }
 ---
 

@@ -44,7 +44,7 @@ export const defaultConfig: ThemeConfig = {
       },
       {
         name: 'About',
-        href: '/about',
+        href: '/about/',
       },
     ],
     categoryMap: [{ name: '胡适', path: 'hu-shi' }],

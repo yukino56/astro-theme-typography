@@ -2,6 +2,7 @@
 import { getEntry, render } from 'astro:content'
 import LayoutDefault from '~/layouts/LayoutDefault.astro'
 import { formatDate } from '~/utils'
+import { withBase } from '~/utils/url'
 
 const { translate: t } = Astro.locals
 const aboutPost = await getEntry('spec', 'about')
@@ -14,7 +15,7 @@ const { Content } = await render(aboutPost)
 <LayoutDefault>
   <header flex="~ col gap-2">
     <h1 class="post-title">
-      <a class="not-prose">{aboutPost.data.title}</a>
+      <a class="not-prose" href={withBase('/about/')}>{aboutPost.data.title}</a>
     </h1>
     <div class="text-3.5">
       <span>{t('posted_at')}</span>
